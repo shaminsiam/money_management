@@ -1,16 +1,80 @@
-# React + Vite
+# 💰 Money Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and user-friendly Money Management Application built with React.js.
 
-Currently, two official plugins are available:
+## 📌 About The Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Money Management is a React-based web application designed to help users manage and track their income and expenses.
 
-## React Compiler
+This project is currently under development.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Technologies Used
 
-## Expanding the ESLint configuration
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- User-friendly interface
+- Income and Expense Management
+- Transaction Form
+- Transaction History
+
+*More features will be added as development continues.*
+
+## 📂 Project Structure
+
+```text
+money_management/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   └── TransactionForm.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+2. Go to the project directory:
+
+```bash
+cd money_management
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Run the development server:
+
+```bash
+npm run dev
+```
+
+## 📈 Project Status
+
+Currently under development.
+
+## 👨‍💻 Author
+
+**Siam**
+
+GitHub: https://github.com/shaminsiam
