@@ -22,7 +22,7 @@ const EXPENSE_CATEGORIES = [
 ]
 
 
-const TransactionForm = (addTransaction) => {
+const TransactionForm = ({ addTransaction }) => {
 
 const [type, setType] = useState('income')
 
