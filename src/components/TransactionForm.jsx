@@ -56,7 +56,7 @@ const TransactionForm = ({ addTransaction }) => {
 
   return (
     <div className="mt-12">
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div className="card bg-base-100 w-full max-w-sm shrink-0">
         <div className="card-body">
           <fieldset className="fieldset">
             <label className="label">Title</label>
