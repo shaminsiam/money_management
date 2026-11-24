@@ -1,6 +1,6 @@
 const Header = ({ transactions }) => {
 
-  const income = transactions.filter(t=> t.type == 'income')
+  const income = transactions.filter(t=> t.type === 'income')
   const totalIncome = income.reduce((sum,t)=> sum + parseFloat(t.amount), 0)
 
   const expense = transactions.filter(t=> t.type == 'expense')
@@ -16,27 +16,27 @@ const Header = ({ transactions }) => {
       </div>
 
       {/* cards */}
-      <div className="flex justify-evenly">
+      <div className="flex justify-evenly flex-wrap gap-2">
         {/* Total Income */}
-        <div class="card w-96 bg-white card-md shadow-sm border-t-3 border-green-600">
-          <div class="card-body">
-            <h2 class="text-2xl text-gray-500">Total Income</h2>
+        <div className="card w-96 bg-white card-md shadow-sm border-t-3 border-green-600">
+          <div className="card-body">
+            <h2 className="text-2xl text-gray-500">Total Income</h2>
             <h2 className="text-2xl text-green-500">৳ {totalIncome}</h2>
           </div>
         </div>
 
         {/* Total Expense */}
-        <div class="card w-96 bg-white card-md shadow-sm border-t-3 border-red-600">
-          <div class="card-body">
-            <h2 class="text-2xl text-gray-500">Total Expenese</h2>
+        <div className="card w-96 bg-white card-md shadow-sm border-t-3 border-red-600">
+          <div className="card-body">
+            <h2 className="text-2xl text-gray-500">Total Expenese</h2>
             <h2 className="text-2xl text-red-600">৳ {totalExpense}</h2>
           </div>
         </div>
 
         {/* Total Balance */}
-        <div class="card w-96 bg-white card-md shadow-sm border-t-3 border-blue-600">
-          <div class="card-body">
-            <h2 class="text-2xl text-gray-500">Total Balance</h2>
+        <div className="card w-96 bg-white card-md shadow-sm border-t-3 border-blue-600">
+          <div className="card-body">
+            <h2 className="text-2xl text-gray-500">Total Balance</h2>
             <h2 className="text-2xl text-blue-500">৳ {totalBalance}</h2>
           </div> 
         </div>

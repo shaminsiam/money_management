@@ -1,13 +1,44 @@
-const Transactions = ({ transactions }) => {
+const Transactions = ({ transactions, setTransactions }) => {
+
+  const handleDelete = (id) => {
+    const afterDelete = transactions.filter(t => t.id !== id);
+
+    window.localStorage.setItem(
+      'money-tracker',
+      JSON.stringify(afterDelete)
+    );
+
+    setTransactions(afterDelete);
+  };
+
   return (
-    <div>
+    <div className="px-5">
       {transactions.map(t => (
-        <div class="card  bg-base-100 card-md shadow-sm">
-          <div class="card-body">
-            <h1>{t?.title}</h1>
-            <div class="justify-end card-actions">
-              <button class="btn btn-error">Delete</button>
+        <div key={t.id} className="card bg-base-100 card-md shadow-sm">
+
+          <div className="flex justify-between">
+
+            <div>
+              <h1 className="text-xl font-semibold">{t?.title}</h1>
+
+              <p>{t?.category}</p>
+
+              <p>{new Date(t?.date).toLocaleDateString('en-BD')}</p>
             </div>
+
+            <div className="justify-end card-actions">
+
+              <p>{t?.amount}</p>
+
+              <button
+                onClick={() => handleDelete(t?.id)}
+                className="btn btn-error text-white"
+              >
+                Delete
+              </button>
+
+            </div>
+
           </div>
         </div>
       ))}
